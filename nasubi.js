@@ -24,7 +24,6 @@
 			
 		onload = function() {
 			start();
-			draw();
 		};
 		
 		function start() {
@@ -41,18 +40,18 @@
 
 		  /* Imageオブジェクトを生成 */			
 			img = new Image();
-			img.src = "toukapad.gif";
+			img.src = "toukapad.gif?" + new Date().getTime();
 			backimg = new Image();
 			backimg.src = "back.gif";
 
 
 			// コマンド初期化
-	  		
-			document.getElementById('main').style.display = "block";
-			document.getElementById('clear').style.display = "none";
-			draw();
-			setcom();
-			
+			img.onload = function() {
+				document.getElementById('main').style.display = "block";
+				document.getElementById('clear').style.display = "none";
+				draw();
+				setcom();
+			}
 		};
 		
 		var nasu = function(day, hp, sex, pow, inte, lack, lev, eye, mouth) {
@@ -133,9 +132,7 @@
 				
 				draw();
 				setcom();
-				
-				console.log(this.sex);
-				console.log(this.mouth);
+
 			};
 		};
 		
