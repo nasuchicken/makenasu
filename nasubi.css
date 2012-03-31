@@ -15,26 +15,31 @@ body {
 }
 
 .button {
-	border-top: 1px solid #000000;
-	background: #bac8d1;
-	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#bac8d1));
-	background: -webkit-linear-gradient(top, #ffffff, #bac8d1);
-	background: -moz-linear-gradient(top, #ffffff, #bac8d1);
-	background: -ms-linear-gradient(top, #ffffff, #bac8d1);
-	background: -o-linear-gradient(top, #ffffff, #bac8d1);
-	padding: 0px 10px;
-	-webkit-border-radius: 0px;
-	-moz-border-radius: 0px;
-	border-radius: 0px;
-	-webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
-	-moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
-	box-shadow: rgba(0,0,0,1) 0 1px 0;
-	color: #000000;
-	font-size: 11px;
-	font-family: Georgia, serif;
-	text-decoration: none;
-	vertical-align: middle;
-	text-align: center;
+	font-size: 12px;
+	color: #050505;
+	padding: 0px 0px;
+	background: -moz-linear-gradient(
+		top,
+		#ffffff 0%,
+		#ffffff);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#ffffff),
+		to(#ffffff));
+	border-radius: 14px;
+	-moz-border-radius: 14px;
+	-webkit-border-radius: 14px;
+	border: 3px solid #ffc552;
+	-moz-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 2px rgba(255,255,255,1);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 2px rgba(255,255,255,1);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,0.2),
+		0px 1px 0px rgba(255,255,255,0.4);
+
 	width: 96px;
 	height: 70px;
 	text-align:center;
@@ -46,7 +51,7 @@ body {
 }
 
 .button:active {
-	border-top-color: #568066;
+
 	background: #568066;  
 	-webkit-appearance: none;
 }

@@ -116,9 +116,9 @@
 					document.getElementById('main').style.display = "none";
 					var result = "翌日、なすびは出荷され" + y + " 円にて売れました。";
 					var tweetLink = '<a href="https://twitter.com/intent/tweet?text='+ encodeURIComponent(result) + ' http://nasukichi.blog116.fc2.com/ ' + '&hashtags=nasubicchi">ツイートする</a>';
-					document.getElementById('res').innerHTML = result +  '<br>' + tweetLink;
+					document.getElementById('res').innerHTML =  "翌日、なすびは出荷され<br>" + y + " 円にて売れました。" +  '<br>' + tweetLink;
 					drawres();
-					document.getElementById('restert').innerHTML ='<input type="button" value="もう一回遊ぶ" onclick="location.reload();">'
+					document.getElementById('restert').innerHTML ='<input type="button" class="button" value="もう一回遊ぶ" onclick="location.reload();">'
 					document.getElementById('clear').style.display = "block";
 				}
 				if( this.hp <0 | this.hp > 50){
@@ -126,7 +126,7 @@
 					var result = "枯れた";
 					var tweetLink = '<a href="https://twitter.com/intent/tweet?text='+ encodeURIComponent(result) +'&hashtags=nasubicchi">ツイートする</a>';
 					document.getElementById('res').innerHTML = result +  '<br>' + tweetLink;
-					document.getElementById('restert').innerHTML ='<input type="button" value="もう一回遊ぶ" onclick="location.reload();">'
+					document.getElementById('restert').innerHTML ='<input type="button" class="button" value="もう一回遊ぶ" onclick="location.reload();">'
 					document.getElementById('clear').style.display = "block";
 				}
 				
