@@ -1,0 +1,52 @@
+body {
+	margin: 0;
+	text-align: center;
+}
+				
+.disp {
+	overflow:auto;
+	height:360px;
+	width:212px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-180px;
+	margin-left:-106px;
+}
+
+.button {
+	border-top: 1px solid #000000;
+	background: #bac8d1;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#bac8d1));
+	background: -webkit-linear-gradient(top, #ffffff, #bac8d1);
+	background: -moz-linear-gradient(top, #ffffff, #bac8d1);
+	background: -ms-linear-gradient(top, #ffffff, #bac8d1);
+	background: -o-linear-gradient(top, #ffffff, #bac8d1);
+	padding: 0px 10px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	-webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+	-moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+	box-shadow: rgba(0,0,0,1) 0 1px 0;
+	color: #000000;
+	font-size: 11px;
+	font-family: Georgia, serif;
+	text-decoration: none;
+	vertical-align: middle;
+	text-align: center;
+	width: 96px;
+	height: 70px;
+	text-align:center;
+	vertical-align: middle;
+}
+
+.button:hover {
+	-webkit-appearance: none;
+}
+
+.button:active {
+	border-top-color: #568066;
+	background: #568066;  
+	-webkit-appearance: none;
+}
