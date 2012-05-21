@@ -2,13 +2,13 @@
 		var n;
 		var img, backimg;
 		var canvas, ctx, canvas2, ctx2;
-		var cv = ["水をあげる","ビールをあげる","ワインを上げる","ジュースっす。","あやしい薬","お話する","ほめる","怒る","野望をかたる","ぐちる","叩く","でこぴん","みがく","炙る","ほったらかす"];
+		var cv = ["to water","to beer","to wine","to juice","to liquid?","talk","praise","get angry","talking about ambition","complain","hit!","Dekopin","polish","scorch","left"];
 		var ch = [5,3,3,3,10,0,-2,-1,0,-1,-3,-2,-2,-3,0];
 		var cs = [0,3,-5,-3,3,-2,-4,3,5,0,5,2,-5,5,0];
 		var cp = [0,2,0,1,-1,0,0,5,2,0,2,1,0,3,0];
 		var ci = [0,0,2,3,-1,3,0,-2,1,2,0,1,0,-3,0];
 		var cl = [0,4,2,2,2,-1,6,3,-2,2,-2,-1,0,1,1];
-		var cmess = ["水をあげた","ビールをお注ぎした。","ワインで乾杯した。","ジュースをゴクゴクのませた。","ドボドボ注いだ。","延々をお話しした。","おほめした。","怒鳴りまくった。","野望をかたった。","グチグチグチグチグチ","パチンした。","凸ピン。","キュキュット磨いた。","いい香りがした。","そっとしておいた。"];
+		var cmess = ["Watering plants","Made to drink beer","Toast with wine","Drink the juice was","Poured into?","The chat","The compliment","Scattered shout","Said the ambition","Continued to complain","Hit","Was flicking","Polished","A savory scent was","left..."];
 		
 		var skset = [];
 		skset[0] = [0,5,6,14];
@@ -38,15 +38,15 @@
 			ctx2 = canvas2.getContext('2d');
 			ctx2.clearRect(0,0,64,64);
 
-		  /* Imageオブジェクトを生成 */			
+		  /* create image object */			
 			img = new Image();
 			img.src = "toukapad.gif?" + new Date().getTime();
 			backimg = new Image();
 			backimg.src = "back.gif";
 
 
-			// コマンド初期化
-			img.onload = function() {
+			// command init
+			backimg.onload = function() {
 				document.getElementById('main').style.display = "block";
 				document.getElementById('clear').style.display = "none";
 				draw();
@@ -114,19 +114,19 @@
 					var y = 100;
 					y = Math.floor(this.hp *1.2 + this.pow +Math.abs(this.sex) * 1.3 +  this.inte + this.lack);
 					document.getElementById('main').style.display = "none";
-					var result = "翌日、なすびは出荷され" + y + " 円にて売れました。";
-					var tweetLink = '<a href="https://twitter.com/intent/tweet?text='+ encodeURIComponent(result) + ' http://nasukichi.blog116.fc2.com/ ' + '&hashtags=nasubicchi">ツイートする</a>';
-					document.getElementById('res').innerHTML =  "翌日、なすびは出荷され<br>" + y + " 円にて売れました。" +  '<br>' + tweetLink;
+					var result = "Sold for " + y + " yen are shipped the next day.";
+					var tweetLink = '<a href="https://twitter.com/intent/tweet?text='+ encodeURIComponent(result) + '&hashtags=nasubicchi">tweet</a>';
+					document.getElementById('res').innerHTML =  "sold for " + y + " yen <br>are shipped the next day." +  '<br>' + tweetLink;
 					drawres();
-					document.getElementById('restert').innerHTML ='<input type="button" class="button" value="もう一回遊ぶ" onclick="location.reload();">'
+					document.getElementById('restert').innerHTML ='<input type="button" class="button" value="again" onclick="location.reload();">'
 					document.getElementById('clear').style.display = "block";
 				}
 				if( this.hp <0 | this.hp > 50){
 					document.getElementById('main').style.display = "none";
-					var result = "枯れた";
-					var tweetLink = '<a href="https://twitter.com/intent/tweet?text='+ encodeURIComponent(result) +'&hashtags=nasubicchi">ツイートする</a>';
+					var result = "Has withered.";
+					var tweetLink = '<a href="https://twitter.com/intent/tweet?text='+ encodeURIComponent(result) + '&hashtags=nasubicchi">tweet</a>';
 					document.getElementById('res').innerHTML = result +  '<br>' + tweetLink;
-					document.getElementById('restert').innerHTML ='<input type="button" class="button" value="もう一回遊ぶ" onclick="location.reload();">'
+					document.getElementById('restert').innerHTML ='<input type="button" class="button" value="agein" onclick="location.reload();">'
 					document.getElementById('clear').style.display = "block";
 				}
 				
@@ -139,7 +139,7 @@
 
 		
 		function draw() {
-		  /* 画像を描画 */
+		  /* draw image */
 			ctx.drawImage(backimg, 0, 0);
 			if( n.lev == 1)
 				ctx.drawImage(img, 64 * 3, 0,  64, 64, 128, 64, 64, 64);

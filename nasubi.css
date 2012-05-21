@@ -1,6 +1,7 @@
 body {
 	margin: 0;
 	text-align: center;
+	-webkit-text-size-adjust: none;
 }
 				
 .disp {
